@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 베너영역 -->
+    <div id="banner">
+        <a href="#" id="banner-link" target="_blank">
+            <img src="img/1.jpg" id="banner-img" width="320" />
+        </a>
+    </div>
+    
+    
+    <script>
+        let randomNum = Math.floor(Math.random() * 6);
+        let imgArr = ['1', '2', '3', '4', '5', '6'];
+        $('#banner-img').attr('src', 'img/' + imgArr[randomNum] + '.jpg');
+        $("#banner-img").click(function(){
+            let link = $(this).attr('href');
+                $('banner-link').attr('href', link);
+        });
+
+    </script>
+</body>
+
+</html>

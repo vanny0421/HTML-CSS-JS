@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //　함수 선언
+     af();
+
+     function af(){
+        for (let i = 0; i < 10; i++){
+            console.log("i : " + i);
+        }
+    }
+
+    //　함수 표현식
+    //　af2();　→　오류
+
+    /*
+    　　선언만이 호이스팅이 된다.
+    　　함수 선언은 밑에서 해도 호이스팅이 되서 상관없지만
+    　　함수 표현식은 먼저 변수에 할당되어야 함수를 사용할 수 있다.
+     */
+    let af2 = function(){
+        for (let i = 0; i < 10; i++){
+            console.log(i);
+        }
+    }
+    af2();
+</script>
+<body>
+    
+</body>
+</html>

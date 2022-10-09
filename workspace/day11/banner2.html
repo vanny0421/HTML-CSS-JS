@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 베너영역 -->
+    <div id="banner">
+        <a href="#" id="banner-link" target="_blank">
+            <img src="" id="banner-img" width="320" />
+        </a>
+    </div>
+    
+    
+    <script>
+        // 배터의 이미지와 클릭시 이동할 url을 담은 배열
+        let banner = [
+            { img : 'img/1.jpg', url : 'http://www.naver.com' },
+            { img : 'img/2.jpg', url : 'http://www.daum.net' },
+            { img : 'img/3.jpg', url : 'http://www.google.com' },
+            { img : 'img/4.jpg', url : 'http://www.koreaitjob.co.kr' }
+        ];
+
+        // 두 인자값 사이의 랜덤값을 리턴하는 함수
+        function random( n1, n2 ){
+            return  parseInt(Math.random() * (n2 - n1 + 1))  + n1;
+        }
+
+        // banner 항목들의 임의의 요소 하나를 선택해서
+        // #banner 영역에 적용하는 함수
+        function random_banner(){
+            // 0~배열길이-1 사이의 랜덤값 얻기
+            let ranCnt = random(0, banner.length-1);
+            // 데이터중 하나 선택 -> 객체
+            let item = banner[ranCnt];
+            // 배너 적용하기
+            $("#banner-link").attr('href',item.url);
+            $("#banner-img").attr('src',item.img);
+        }
+
+        // 페이지가 열린 후 호출될 함수
+        $(function(){
+            // 베너 적용함수 호출
+            random_banner();
+
+            // 일정 시간마다 베너 변경
+            setInterval(function(){
+                random_banner();
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1.
+            아이디 입력받는 prompt, 
+            아이디가 usertest 인 경우, 
+                password 입력받는다(prompt).  
+                    password가 1234 인 경우, 인증되었습니다 alert
+                    password가 1234 아닌 경우, 인증에 실패하였습니다 alert
+            아이디가 usertest 아닌 경우, 
+                인증에 실패하였습니다. alert
+        */
+        var id = prompt("아이디를 입력해주세요");
+        if( id == 'usertest' ){
+            var pw = prompt("패스워드를 입력해주세요");
+            if( pw == '1234' ){
+                alert("인증되었습니다.");
+            } else {
+                alert("인증에 실패 했습니다.");
+            }
+        } else {
+            alert("인증에 실패했습니다.");
+        }
+
+    </script>
+
+</body>
+</html>

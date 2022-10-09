@@ -1,0 +1,30 @@
+<!--
+   이미지 태그
+   - 비어있는 요소, void 요소(Empty elements)
+   - 주로 문서에 무언가를 첨부하기 위해서 사용되며 단일 태그(single tag)라고 한다.
+   <img src="경로">
+   
+   1. 웹 페이지에서 주로 사용되는 이미지의 종류
+      1) JPEG 이미지 : .jpg, .jpeg, 휴대폰, 카메라 사진
+      2) GIF 이미지 : .gif, 움직이는 이미지
+      3) PNG 이미지 : .png, 배경을 투명화할 때 사용
+      
+   2. html 문서에 이미지를 삽입할 때에는 <img> 태그를 사용한다.
+      1) 절대 경로 : 현재 어디에 위치해도 찾아갈 수 있는 경로
+      2) 상대 경로 : 현재 작성하는 파일 기준으로 찾아가는 경로
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 태그</title>
+</head>
+<body>
+   <!-- 크롬 브라우저에서는 로컬 절대 경로에 대한 보안성을 강조하기 때문에 해당 절대 경로에는 접근할 수 없도록 막아준다. -->
+   <img src="D:\gb_0900_vk\html\resource\icon1.png" alt="이미지 없음">
+   <img src="img1\icon2.png">
+   <img src="..\icon3.png">
+   <img src="..\img2\icon4.png">
+   <img src="https://cdn1.iconfinder.com/data/icons/photo-stickers-words/128/word_7-128.png">
+</body>
+</html>

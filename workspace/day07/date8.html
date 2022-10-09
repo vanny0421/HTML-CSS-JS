@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            두 날짜의 차이를 구하기 - TimeStamp 값의 사용
+                - TimeStamp 1970년 1월 1일 자정부터 지금까지 지난 시각을 
+                초 단위로 바꾼값
+                - javascript에서는 getTime()함수를 통해서 Date객체가
+                담고있는 기각을 1/1000초 단위의 TimeStamp형태로 변환하여 
+                리턴해 준다.
+                - (24시간 * 60분 * 60초 * 1000)으로 나누면 날짜 차이값을
+                구할 수 있다.
+        */
+        // 날짜 객체
+        let nextYear = new Date(2023, 0, 1);
+        let currentDate = new Date();
+
+        let cnt = nextYear.getTime() - currentDate.getTime();
+
+        let newYear = nextYear.getFullYear();
+        let day = Math.floor(cnt / (24 * 60 * 60 * 1000));
+        document.write("<h1> " + newYear + "년 까지 " + day + "일 남았습니다 🌝🤍 화이팅 🤍</h1>"); 
+
+
+        // 올해는 앞으로 00일 남았습니다.
+        function getDday(y, m, d){
+            let today = new Date();
+            let dday = new Date(y, m-1, d);
+            let cnt = dday.getTime() - today.getTime();
+
+            let n = Math.ceil(cnt / (24*60*60*1000));
+            return n;
+            
+            //return Math.ceil((cnt / 24*60*60*1000));
+        }
+
+        let date = new Date();
+        let y = date.getFullYear();
+        let dday = getDday(y, 12, 31);
+
+        document.write( "<h1>올해는 앞으로 " + dday + "일 남았습니다.</h1>" );
+    </script>
+</body>
+</html>

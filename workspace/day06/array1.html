@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arData1 = [];
+       
+        // 존재하지 않는 인덱스에 새로운 값을 대입하면 요소 추가
+        // 원하는 방에 데이터 추가 하면 됨
+        arData1[0] = 4;
+        arData1[3] = 8;
+        arData1[7] = 6;
+
+        console.log(arData1);
+
+        // 그 외에 있는 인덱스는 undefined로 채워짐
+        console.log(arData1[1]);
+        console.log(arData1[6]);
+
+        // push() : 마지막에 추가
+        let arData2 = [];
+
+        arData2.push(10);
+        arData2.push(20);
+        arData2.push(30);
+        arData2.push(40);
+        arData2.push(50);
+        console.log(arData2);
+    </script>
+</body>
+</html>

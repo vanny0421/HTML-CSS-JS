@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 태그</title>
+</head>
+<body>
+   <h1>form태그와 input태그 속성 예제</h1>
+   
+   <form action="login.jsp" method="post" name="loginForm">
+      <p>
+         아이디<input type="text" size="20" maxlength="12" placeholder="아이디를 넣어주세요." name="userId" required>
+      </p>
+      <p>
+         비밀번호<input type="password" size="20" maxlength="12" placeholder="비밀번호를 넣어주세요." name="userPw" required>
+      </p>
+      
+      <fieldset>
+         <legend>성별</legend>
+         <p>
+            남자<input type="radio" name="gender" value="남">
+            여자<input type="radio" name="gender" value="여">
+            선택안함<input type="radio" name="gender" value="선택안함" checked>
+         </p>
+      </fieldset>
+      
+      <fieldset>
+         <legend>취미</legend>
+         <p>
+            <label>드라이브<input type="checkbox" name="hobby" value="드라이브"></label>
+            등산<input type="checkbox" name="hobby" value="등산">
+            영화감상<input type="checkbox" name="hobby" value="영화감상">
+            게임<input type="checkbox" name="hobby" value="게임">
+            <br>
+            <input type="checkbox" name="hobby" value="기타">기타
+            <input type="text">
+         </p>
+      </fieldset>
+      
+      <p>파일 선택<input type="file"></p>
+      <!-- label for에 연결할 외부 태그 id를 작성하면 label 안에 작성된 내용을 통해 작동시킬 수 있다. -->
+      <p><label for="img"><img src="plus.png"></label><input type="file" style="visibility:hidden;" id="img"></p>
+      <!-- label 안에 모든 것을 포함시키면 자동으로 연결된다. -->
+      <p><label><img src="plus.png"><input type="file" style="visibility:hidden;"></label></p>
+      <p>색상<input type="color" value="#00ff00"></p>
+      <p>메일 주소<input type="email"></p>
+      <p>웹 사이트<input type="url"></p>
+      <p>연락처<input type="tel"></p>
+      <p>조회 기간<input type="date"></p>
+      <p>참여 인원<input type="number" value="1" min="0" max="100" step="5"></p>
+      <p>단계(상, 중, 하) <input type="range" value="1" min="1" max="3"></p>
+      <p>검색<input type="search"></p>
+      
+      <p>
+         학과 선택
+         <select name="major">
+            <option value="archi">건축공학과</option>
+            <option value="mechanic">기계공학과</option>
+            <option value="indust">산업공학과</option>
+            <option value="elec">전기전자공학과</option>
+            <option value="com">컴퓨터공학과</option>
+            <option value="chemical">화학공학과</option>
+         </select>
+      </p>
+      
+      <p>
+         관심분야
+         <input type="text" list="choice">
+         <datalist id="choice">
+            <option value="grammar">문법</option>
+            <option value="voca">어휘</option>
+            <option value="speaking">회화</option>
+            <option value="listening">리스닝</option>
+            <option value="news">뉴스 청취</option>
+         </datalist>
+      </p>
+      
+      <textarea cols="100" rows="5">안녕하세요</textarea>
+      
+      <p>
+         진행률 <progress value="30" max="100"></progress>
+      </p>
+      
+      <p>
+         <!-- action을 실행한다. -->
+         <input type="submit" value="가입 완료">
+      </p>
+      <p>
+         <!-- action을 실행하지 않는다. -->
+         <input type="button" value="버튼" onclick="getMsg()">
+      </p>
+      <p>
+         <input type="reset" value="초기화">
+      </p>
+      <p>
+         <!-- form태그 안에 있다면 action을 실행한다. -->
+         <button type="submit">버튼1</button>
+         <button type="button">버튼2</button>
+         <button type="reset">버튼3</button>
+      </p>
+   </form>
+</body>
+<script>
+   function getMsg(){
+      alert("클릭 했어요!");
+   }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

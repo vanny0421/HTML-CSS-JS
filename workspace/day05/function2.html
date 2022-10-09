@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f( x ){
+            var y = x + 1;
+            document.write("<h1> " + y + "</h1>");
+        }
+
+        function f2( x, y ){
+            var z = x + y;
+            document.write("<h1>" + z + "</h1>");
+        }
+
+        function f3(x, y){
+            return x + y;
+        }
+        
+        var a = f3(1, 2);
+        document.write("<h1> a : " + a + "</h1>");
+        var b = f3(2, 10, 6);
+        document.write("<h1> b : " + b + "</h1>");
+        document.write("---------------");
+        f2(2, 5);
+        f2(5);
+        f2(2, 7, 9, 10, 50);
+
+        document.write("---------------");
+        f(5);
+        f(7);
+        f(10);
+        f("javascript");
+        f(5, 10);
+        f();
+
+
+    </script>
+</body>
+</html>

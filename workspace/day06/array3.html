@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // push() : 배열의 값을 추가
+        let arData1 = ['a', 'b', 'c', 'd'];
+
+        arData1.push('e');
+        document.write(arData1);
+        document.write('<br>-----------------------<br>');
+
+        // concat() : 배열의 값을 추가
+        let arData2 = ['a', 'b', 'c'];
+        arData2 = arData2.concat(['d', 'e', 'f']);
+        document.write(arData2);
+
+        document.write('<br>-----------------------<br>');
+        // unshift() : 맨 앞에 배열의 값을 추가
+        arData2.unshift('zzz');
+        document.write(arData2);
+    </script>
+</body>
+</html>

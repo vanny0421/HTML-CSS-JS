@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let currentDate = new Date();
+
+        // 년,월,일 리턴받기
+        let yy = currentDate.getFullYear();
+        // 월은 0이 1월, 11이 12월을 의미한다.
+        let mm = currentDate.getMonth() + 1;
+        let dd = currentDate.getDate();
+
+        // 일요일 0, 토요일이 6
+        let days_kor = ['일', '월', '화', '수', '목', '금', '토'];
+        let days_eng = ['Sun', 'Mon', 'Tues', 'Thurs', 'Fri', 'Satur'];
+
+        // 0 = 일요일 ~ 6 = 토요일 값이 리턴
+        let i = currentDate.getDay();
+        const day_kor = days_kor[i];
+        const day_eng = days_eng[i];
+
+        const months = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December" 
+                        ];
+
+        let m = currentDate.getMonth();
+        const month = months[m];
+        const s_month = months[m].substring(0, 3)
+
+        const result1 = day_kor + "요일 😋<br>&nbsp;" + yy + "년 " + mm + "월 " + dd + "일 ";
+        document.write("<h1> 오늘은 햅삐한 " + result1 + "</h1>");
+
+        const result2 = day_eng + "day, " + s_month + " " + dd + ", " + yy;
+        document.write("<h1> &nbsp;" + result2 + "</h1>");
+
+        const hh = currentDate.getHours();
+        const mi = currentDate.getMinutes();
+        const ss = currentDate.getSeconds();
+
+        const time = hh + "시 " + mi + "분 " + ss + "초";
+        document.write("<h1> 현재 시간은 <br>&nbsp;" + time + "</h1>");
+
+        if (hh <= 12 && hh >= 6) {
+            document.write("<h1> 현재 시간은 <br>&nbsp; 오전 " + time + "</h1>");
+        } else if (hh >= 12 && hh < 22) {
+            document.write("<h1> 현재 시간은 <br>&nbsp; 오후 " + time + "</h1>");
+        } else if (hh >=22 && hh <=24) {
+            document.write("<h1> 현재 시간은 <br>&nbsp; 밤 " + time + "</h1>");
+        } else {
+            document.write("<h1> 현재 시간은 <br>&nbsp; 새벽 " + time + "</h1>");
+        }
+        
+
+    </script>
+</body>
+</html>

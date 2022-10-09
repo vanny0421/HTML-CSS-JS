@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arData1 = [10,20,30];
+        let arData2 = [40,50,60];
+
+        // 배열 연결
+        // 두개의 배열을 이어 붙여서 반환, 원본은 건들이지 않는다.
+        let arData3 = arData1.concat(arData2);
+        console.log(arData3);
+
+        // 배열 요소로 문자열 만들기
+        // 배열의 값 사이사이에 작성한 값으로 연결해서 문자열로 반환
+        let data = arData3.join("🤍");
+        console.log(data);
+
+        // 배열 정렬
+        let arr = [120,1,74,36,27,84,93,17,45,58,62];
+        arr.sort(); // 기본적으로 문자열로 정렬(오름차순)
+        console.log("sort() : " + arr);
+        arr.reverse(); // 기본적으로 문자열로 정렬 (내림차순)
+        console.log("reverse() : " + arr);
+
+        // 숫자 기준 정렬
+        // 오름차순 정렬
+        arr.sort(function(a,b){return a-b});
+        console.log(arr);
+        // 내림차순 정렬
+        arr.sort(function(a,b){return b-a});
+
+        
+    </script>
+</body>
+</html>
+

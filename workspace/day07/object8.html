@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 생성자
+    function Car(brand, color, price) {
+        this.brand = brand;
+        this.color = color;
+        this.price = price;
+        
+        // 화살표 함수. 람다식 (익명함수 선언할 때 간단하게 하는 방법)
+        // () 안에 매개변수를 넣으면 된다.
+        this.engineStart = ()=> {
+            console.log(this.brand + " 시동 켜기");
+        }
+    }
+
+    const mycar = new Car("Bentley", "PowderBlue", 350000);
+    const newCar = new Car("Rolls-Royce", "White", 800000);
+
+    // 프로퍼티를 위에서 정의하지 않은 것을 쓰면 수정되고 추가된다.
+    mycar.pw = "abcd";
+    console.log(mycar);
+
+    // 호이스팅이 되서 먼저 실행됨
+    // 모든 객체를 만들 때 공통되어 있는 프로토타입에 wheel을 추가해
+    // Car 생성자를 사용해서 만드는 객체들에게 모두 다 추가
+    Car.prototype.wheel = 4;
+    console.log(mycar.wheel);
+    console.log(newCar.wheel);
+</script>
+</html>

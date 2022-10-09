@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let f = function() {
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+    }
+
+    // 콜백함수 : 함수를 매개변수로 넘기고 그 안에서 함수를 호출
+    function f2(callback) {
+        callback();
+    }
+
+    f2(f);
+    f2(function(){
+        alert("콜백함수 호출");
+    })
+</script>
+</html>

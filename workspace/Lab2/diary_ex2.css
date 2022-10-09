@@ -1,0 +1,47 @@
+body {
+	background-image: url(images/paper.png);
+}
+.content {
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: ivory;
+	border: 3px solid red;
+}	
+header {
+	border: 3px solid green;
+    margin: 3px;
+}
+header h2 {
+	border: 3px solid orange;
+}
+#div_entry1 {
+	padding: 15px;
+	background-color: rgb(236, 236, 245);
+	border: 3px solid lime;
+	margin-top: 10px;
+    margin: 3px;
+}
+#div_entry2 {
+	padding: 15px;
+	background-color: rgb(236, 236, 245);
+	border: 3px solid lime;
+	margin-top: 10px;
+    margin: 3px;
+}
+#div_entry3 {
+	padding: 15px;
+	background-color: rgb(236, 236, 245);
+	border: 3px solid lime;
+	margin-top: 10px;
+    margin: 3px;
+}
+div span {
+	border: 3px solid cyan;
+}
+/* p {
+	border: thin solid gray;
+} */
+footer {
+	border: 3px solid blue;
+    margin: 3px;
+}

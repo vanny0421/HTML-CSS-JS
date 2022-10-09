@@ -1,0 +1,32 @@
+.content {
+	border: 3px solid red;
+}	
+header {
+	border: 3px solid green;
+    margin: 3px;
+}
+header h2 {
+	border: 3px solid orange;
+}
+#div_entry1 {
+	border: 3px solid lime;
+    margin: 3px;
+}
+#div_entry2 {
+	border: 3px solid lime;
+    margin: 3px;
+}
+#div_entry3 {
+	border: 3px solid lime;
+    margin: 3px;
+}
+div span {
+	border: 3px solid cyan;
+}
+p {
+	border: thin solid gray;
+}
+footer {
+	border: 3px solid blue;
+    margin: 3px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1.loop5.html
+            구구단 1단 ~ 9단까지
+            h1, ul > li
+        */
+        for( var i = 2; i<=9; i++ ){
+            document.write("<h1> " + i + "단</h1>");
+
+            document.write("<ul>");
+            for( var j = 1; j<10; j++ ){
+                var k = i * j;
+                var result = i + " x " + j + " = " + k;
+                document.write("<li>" + result + "</li>");
+            }
+            document.write("</ul>");
+        }
+
+    </script>
+</body>
+</html>

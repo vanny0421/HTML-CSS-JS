@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>숨기기, 보이기</h1>
+    <p>
+        <button id="btn1">문장 숨기기</button>
+        <button id="btn2">문장 표시하기</button>
+    </p>
+    <div id="text">안녕하세요, jquery 입니다.</div>
+
+    <script>
+        /*
+            인자값으로 밀리초(ms)로 설정하거나
+            slow, fast와 같은 예약어를 전달하여 이펙트 효과의 속도를
+            설정할 수 있다.
+         */
+        $("#btn1").on('click', function(){
+            $("#text").hide(1000);
+        });
+        $("#btn2").on('click', function(){
+            $("#text").show("fast");
+        });
+    </script>
+</body>
+</html>

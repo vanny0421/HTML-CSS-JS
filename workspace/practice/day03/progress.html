@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>진행률 예제</title>
+</head>
+<body>
+   <div>
+      <progress value="20" max="100" id="pg"></progress>
+   </div>
+   <button onclick="pgFunction();">click</button>
+</body>
+<script>
+   function pgFunction(){
+      document.getElementById('pg').value = "80";
+   }
+</script>
+</html>

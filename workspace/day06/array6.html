@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arData1 = [10,20,30,40,50,60];
+        console.log(arData1);
+
+        // pop() : 가장 마지막에 있는 값 삭제
+        console.log("삭제되는 값 : " + arData1.pop());
+        console.log(arData1);
+        // shift() : 가장 처음에 있는 값 삭제
+        console.log("삭제되는 값 : " + arData1.shift());
+        console.log(arData1);
+
+        console.log("------------------------------");
+
+        /* 배열명.splice(시작인덱스, 지울요소개수, 추가할 값1, 추가할 값2, ...)
+         * 추가할 값은 생략 가능
+         * 지워지는 값들을 리턴
+         */
+        let arData2 = [10,20,30,40,50,60];
+
+        console.log(arData2);
+
+        arData2.splice(0, 4, "Hello", "JavaScript !");
+        console.log(arData2);
+
+    </script>
+</body>
+</html>

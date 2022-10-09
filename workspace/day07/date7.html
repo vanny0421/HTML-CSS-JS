@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 올해는 앞으로 00일 남았습니다.
+        function getDday(y, m, d){
+            let today = new Date();
+            let dday = new Date(y, m-1, d);
+            let cnt = dday.getTime() - today.getTime();
+
+            let n = Math.ceil(cnt / (24*60*60*1000));
+            return n;
+            
+            //return Math.ceil((cnt / 24*60*60*1000));
+        }
+
+        let date = new Date();
+        let y = date.getFullYear();
+        let dday = getDday(y, 12, 31);
+
+        document.write( "<h1>올해는 앞으로 " + dday + "일 남았습니다.</h1>" );
+
+    </script>
+</body>
+</html>
